@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Painel Primario</title>
+</head>
+
+<style>
+
+    body{
+        background-color: black;
+    }
+
+</style>
+
+<script language="JavaScript">
+    function protegercodigo() {
+    if (event.button==2||event.button==3){
+        alert('Codigo protegido!');}
+    }
+    document.onmousedown=protegercodigo
+</script>
+
+<script type="text/javascript">
+    function display(form){
+    if (form.username.value=="admin") { 
+    if (form.password.value=="admin") {              
+    location="login2.html" 
+    } else {
+    alert("Senha errada!")
+    }
+    } else {  alert("Insira o seu login!")
+    }
+    }
+</script>       
+
+<body>
+<form>
+    <div>
+    <br>
+    <center><h1>TELA DE LOGIN</h1></center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center><label>Usuário</label></center>
+    <center><input type="text" name="username"></center>
+    <br>
+    <center><label>Senha</label></center>
+    <center><input type="text" name="password"></center>
+    <br>
+    <center><input type="button" value="Login" onClick="display(this.form)"/></center>
+</form>
+</body>
+</html>
